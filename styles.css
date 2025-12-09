@@ -211,6 +211,31 @@ a {
     color: #fbbf24;
 }
 
+/* Why Choose Art */
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.2rem;
+    margin-top: 0.8rem;
+}
+
+.why-item {
+    background: #020617;
+    border-radius: 12px;
+    border: 1px solid #1f2937;
+    padding: 1.1rem 1rem;
+}
+
+.why-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.35rem;
+}
+
+.why-item p {
+    font-size: 0.9rem;
+    color: #d1d5db;
+}
+
 /* Sections */
 .section {
     padding: 3rem 0;
