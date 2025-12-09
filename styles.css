@@ -424,6 +424,22 @@ a {
     font-size: 0.8rem;
     color: #9ca3af;
 }
+.review-stars {
+    font-size: 0.9rem;
+    color: #fbbf24;
+    margin-bottom: 0.4rem;
+}
+
+.reviews-link-row {
+    margin-top: 1.4rem;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.reviews-btn {
+    font-size: 0.9rem;
+}
+
 
 /* FAQs using <details> */
 .faq-list {

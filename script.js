@@ -28,7 +28,7 @@
 
     function resetTimer() {
         if (timer) clearInterval(timer);
-        timer = setInterval(nextSlide, 3000); // 3 seconds per image
+        timer = setInterval(nextSlide, 4000); // 4  seconds per image
     }
 
     // Button + dot events
