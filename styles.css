@@ -59,6 +59,35 @@ a {
     text-transform: uppercase;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+}
+
+.logo-img {
+    height: 42px;
+    width: auto;
+    display: block;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-main {
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+}
+
+.logo-sub {
+    font-size: 0.75rem;
+    color: #9ca3af;
+    text-transform: uppercase;
+}
+
 .main-nav a {
     margin-left: 1.25rem;
     font-size: 0.95rem;
@@ -70,8 +99,8 @@ a {
 }
 
 .main-nav a:hover {
-    color: #fbbf24; /* warm yellow/orange accent */
-    border-bottom-color: #fbbf24;
+    color: #22c55e;
+    border-bottom-color: #22c55e;
 }
 
 /* Hero */
@@ -185,8 +214,8 @@ a {
 }
 
 .badge-link {
-    border-color: #fbbf24;
-    color: #fbbf24;
+    border-color: #22c55e;
+    color: #22c55e;
 }
 
 /* Buttons */
@@ -208,14 +237,14 @@ a {
 }
 
 .primary-btn {
-    background-color: #fbbf24;
+    background-color: #22c55e;
     color: #1f2937;
-    border-color: #fbbf24;
+    border-color: #22c55e;
 }
 
 .primary-btn:hover {
-    background-color: #fcd34d;
-    border-color: #fcd34d;
+    background-color: #4ade80;
+    border-color: #4ade80;
 }
 
 .secondary-btn {
@@ -224,9 +253,9 @@ a {
     border-color: #4b5563;
 }
 
-.secondary-btn:hover {
-    border-color: #fbbf24;
-    color: #fbbf24;
+.primary-btn:hover {
+    background-color: #4ade80;
+    border-color: #4ade80;
 }
 
 /* Why Choose Art */
@@ -420,9 +449,9 @@ a {
     padding: 0;
 }
 
-.gallery-dot.active {
-    background: #fbbf24;
-    border-color: #fbbf24;
+.primary-btn:hover {
+    background-color: #4ade80;
+    border-color: #4ade80;
 }
 
 .video-wrapper {
@@ -499,7 +528,7 @@ a {
 }
 
 .faq-item[open] {
-    border-color: #fbbf24;
+    border-color: #22c55e;
 }
 
 .faq-item summary {
@@ -622,7 +651,8 @@ a {
     bottom: 1.25rem;
     padding: 0.65rem 1.1rem;
     border-radius: 999px;
-    background: #fbbf24;
+    border-color: #22c55e;
+    background: #22c55e;
     color: #111827;
     font-size: 0.9rem;
     font-weight: 600;
@@ -634,7 +664,7 @@ a {
 }
 
 .floating-call:hover {
-    background: #fcd34d;
+    background: #4ade80;
 }
 
 .floating-call:active {
