@@ -1,0 +1,414 @@
+/* ==================================================
+   TABLE OF CONTENTS
+
+   01. Tablet layouts
+   02. Mobile navigation
+   03. Phone layouts
+   04. Reduced motion
+================================================== */
+
+/* ==================================================
+   01. TABLET LAYOUTS
+================================================== */
+
+@media (max-width: 980px) {
+    .hero-content,
+    .feature-layout,
+    .video-layout,
+    .area-layout,
+    .faq-layout,
+    .contact-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-copy h1 {
+        max-width: 14ch;
+    }
+
+    .hero-proof {
+        max-width: 620px;
+    }
+
+    .video-copy {
+        max-width: 620px;
+    }
+
+    .review-grid {
+        grid-template-columns:
+            1fr
+            1fr;
+    }
+
+    .featured-review {
+        grid-column:
+            1
+            /
+            -1;
+    }
+
+    .area-list div {
+        grid-template-columns:
+            140px
+            1fr;
+    }
+}
+
+/* ==================================================
+   02. MOBILE NAVIGATION
+================================================== */
+
+@media (max-width: 860px) {
+    html {
+        scroll-padding-top: 74px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .main-nav {
+        position: fixed;
+
+        inset:
+            74px
+            0
+            auto
+            0;
+
+        display: grid;
+
+        gap: 0;
+
+        max-height: 0;
+
+        overflow: hidden;
+
+        border-bottom:
+            1px solid
+            var(--line);
+
+        background:
+            rgba(
+                16,
+                18,
+                20,
+                0.98
+            );
+
+        opacity: 0;
+        visibility: hidden;
+
+        transition:
+            max-height 0.25s ease,
+            opacity 0.2s ease,
+            visibility 0.2s ease;
+    }
+
+    .main-nav.is-open {
+        max-height:
+            calc(
+                100vh - 74px
+            );
+
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .main-nav a {
+        padding:
+            1rem
+            1.25rem;
+
+        border-top:
+            1px solid
+            rgba(
+                255,
+                255,
+                255,
+                0.05
+            );
+
+        font-size: 1rem;
+    }
+
+    .main-nav .nav-book {
+        margin: 0;
+
+        border: 0;
+        border-radius: 0;
+
+        color: var(--accent-light);
+    }
+
+    .trust-grid {
+        grid-template-columns:
+            repeat(
+                2,
+                1fr
+            );
+    }
+
+    .trust-grid div + div {
+        border-left: 0;
+    }
+
+    .trust-grid div:nth-child(even) {
+        border-left:
+            1px solid
+            var(--line);
+    }
+
+    .trust-grid div:nth-child(n + 3) {
+        border-top:
+            1px solid
+            var(--line);
+    }
+
+    .split-heading {
+        grid-template-columns: 1fr;
+
+        gap: 1rem;
+    }
+
+    .booking-support {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+}
+
+/* ==================================================
+   03. PHONE LAYOUTS
+================================================== */
+
+@media (max-width: 680px) {
+    .container {
+        width:
+            min(
+                100% - 1.4rem,
+                var(--content)
+            );
+    }
+
+    .logo-main {
+        font-size: 0.92rem;
+    }
+
+    .logo-sub {
+        font-size: 0.66rem;
+    }
+
+    .logo-img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .hero {
+        padding-top: 3.7rem;
+        padding-bottom: 4.5rem;
+    }
+
+    .hero-actions {
+        display: grid;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .hero-proof {
+        padding: 1.25rem;
+    }
+
+    .trust-strip {
+        padding-top: 0.8rem;
+    }
+
+    .trust-grid strong {
+        font-size: 0.88rem;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+
+    .service-item summary {
+        padding: 1rem;
+    }
+
+    .service-body {
+        padding:
+            0
+            1rem
+            1rem;
+    }
+
+    .gallery-track {
+        aspect-ratio: 4 / 3;
+
+        border-radius: var(--radius);
+    }
+
+    .gallery-nav {
+        width: 40px;
+        height: 40px;
+    }
+
+    .gallery-prev {
+        left: 0.45rem;
+    }
+
+    .gallery-next {
+        right: 0.45rem;
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-review {
+        grid-column: auto;
+    }
+
+    .area-list div {
+        grid-template-columns: 1fr;
+
+        gap: 0.35rem;
+    }
+
+    .square-booking-header {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .square-booking-widget {
+        min-height: 500px;
+
+        padding: 0.55rem;
+    }
+
+    .square-booking-widget iframe {
+        min-height: 480px;
+    }
+
+    .booking-support-actions {
+        display: grid;
+
+        width: 100%;
+    }
+
+    .booking-support-actions .btn {
+        width: 100%;
+    }
+
+    .contact-card {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-card > * {
+        border-right: 0 !important;
+
+        border-bottom:
+            1px solid
+            var(--line);
+    }
+
+    .contact-card > *:last-child {
+        border-bottom: 0;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .mobile-action-bar {
+        position: fixed;
+
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        z-index: 110;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(
+                3,
+                1fr
+            );
+
+        padding:
+            0.55rem
+            max(
+                0.65rem,
+                env(safe-area-inset-right)
+            )
+            calc(
+                0.55rem +
+                env(safe-area-inset-bottom)
+            )
+            max(
+                0.65rem,
+                env(safe-area-inset-left)
+            );
+
+        border-top:
+            1px solid
+            var(--line);
+
+        background:
+            rgba(
+                13,
+                15,
+                17,
+                0.96
+            );
+
+        backdrop-filter: blur(12px);
+    }
+
+    .mobile-action-bar a {
+        min-height: 44px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        border-right:
+            1px solid
+            var(--line);
+
+        color: var(--text);
+
+        font-weight: 750;
+        text-decoration: none;
+    }
+
+    .mobile-action-bar a:last-child {
+        border-right: 0;
+
+        color: var(--accent-light);
+    }
+}
+
+/* ==================================================
+   04. REDUCED MOTION
+================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration:
+            0.01ms !important;
+
+        transition-duration:
+            0.01ms !important;
+    }
+}

@@ -1,0 +1,421 @@
+/* ==================================================
+   TABLE OF CONTENTS
+
+   01. Reset and variables
+   02. Base elements
+   03. Shared utilities
+   04. Header and navigation
+   05. Footer
+================================================== */
+
+/* ==================================================
+   01. RESET AND VARIABLES
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #101214;
+    --bg-2: #15191d;
+    --bg-3: #1b2025;
+
+    --panel: #1d2329;
+    --panel-soft: #232a31;
+
+    --text: #f7f8fa;
+    --text-soft: #c9d0d7;
+    --muted: #939da7;
+
+    --line: #2c343d;
+
+    --accent: #d6a354;
+    --accent-light: #edc77f;
+    --accent-dark: #80602f;
+
+    --radius-sm: 12px;
+    --radius: 18px;
+    --radius-lg: 26px;
+
+    --shadow:
+        0 22px 55px
+        rgba(0, 0, 0, 0.28);
+
+    --content: 1120px;
+}
+
+/* ==================================================
+   02. BASE ELEMENTS
+================================================== */
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 84px;
+}
+
+body {
+    font-family:
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+
+    background: var(--bg);
+    color: var(--text);
+
+    line-height: 1.65;
+    overflow-x: hidden;
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+}
+
+h1 {
+    font-size:
+        clamp(
+            2.45rem,
+            6vw,
+            4.6rem
+        );
+}
+
+h2 {
+    font-size:
+        clamp(
+            2rem,
+            4vw,
+            3.15rem
+        );
+}
+
+h3 {
+    font-size: 1.15rem;
+}
+
+/* ==================================================
+   03. SHARED UTILITIES
+================================================== */
+
+.container {
+    width:
+        min(
+            100% - 2.5rem,
+            var(--content)
+        );
+
+    margin-inline: auto;
+}
+
+.section {
+    position: relative;
+
+    padding:
+        clamp(
+            4.2rem,
+            8vw,
+            7rem
+        )
+        0;
+}
+
+.eyebrow {
+    margin-bottom: 0.7rem;
+
+    color: var(--accent);
+
+    font-size: 0.76rem;
+    font-weight: 750;
+
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+}
+
+.section-heading {
+    margin-bottom: 2rem;
+}
+
+.split-heading {
+    display: grid;
+
+    grid-template-columns:
+        1.35fr
+        0.65fr;
+
+    gap: 2rem;
+    align-items: end;
+}
+
+.centered-heading {
+    max-width: 720px;
+
+    margin-inline: auto;
+    text-align: center;
+}
+
+.centered-heading p:last-child {
+    margin-top: 0.8rem;
+}
+
+.btn {
+    display: inline-flex;
+
+    min-height: 48px;
+
+    align-items: center;
+    justify-content: center;
+
+    padding: 0.75rem 1.25rem;
+
+    border: 1px solid transparent;
+    border-radius: 999px;
+
+    font-weight: 750;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.18s ease,
+        background 0.18s ease,
+        border-color 0.18s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.primary-btn {
+    background: var(--accent);
+    color: #17130d;
+
+    border-color: var(--accent);
+}
+
+.primary-btn:hover {
+    background: var(--accent-light);
+}
+
+.secondary-btn {
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.025
+        );
+
+    color: var(--text);
+
+    border-color: #59636d;
+}
+
+.secondary-btn:hover {
+    border-color: var(--accent);
+    color: var(--accent-light);
+}
+
+.text-link {
+    color: var(--accent-light);
+
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.text-link:hover {
+    text-decoration: underline;
+}
+
+/* ==================================================
+   04. HEADER AND NAVIGATION
+================================================== */
+
+.site-header {
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    border-bottom:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.06
+        );
+
+    background:
+        rgba(
+            16,
+            18,
+            20,
+            0.9
+        );
+
+    backdrop-filter: blur(14px);
+}
+
+.nav-container {
+    min-height: 74px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1.25rem;
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 0.75rem;
+
+    color: var(--text);
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 10px;
+
+    object-fit: cover;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1.25;
+}
+
+.logo-main {
+    font-weight: 800;
+}
+
+.logo-sub {
+    color: var(--muted);
+
+    font-size: 0.72rem;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+
+    gap: 1.15rem;
+}
+
+.main-nav a {
+    color: var(--text-soft);
+
+    font-size: 0.92rem;
+    font-weight: 650;
+
+    text-decoration: none;
+}
+
+.main-nav a:hover {
+    color: var(--accent-light);
+}
+
+.main-nav .nav-book {
+    padding: 0.55rem 0.95rem;
+
+    border:
+        1px solid
+        var(--accent-dark);
+
+    border-radius: 999px;
+
+    color: var(--accent-light);
+}
+
+.menu-toggle {
+    display: none;
+
+    width: 44px;
+    height: 44px;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius: 10px;
+
+    background: var(--panel);
+
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+
+    width: 20px;
+    height: 2px;
+
+    margin: 4px auto;
+
+    background: var(--text);
+}
+
+/* ==================================================
+   05. FOOTER
+================================================== */
+
+.site-footer {
+    padding: 1.6rem 0 5.25rem;
+
+    border-top:
+        1px solid
+        var(--line);
+
+    background: #0c0e10;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    color: var(--muted);
+
+    font-size: 0.84rem;
+}
+
+.mobile-action-bar {
+    display: none;
+}

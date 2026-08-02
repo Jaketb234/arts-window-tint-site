@@ -1,0 +1,1107 @@
+/* ==================================================
+   TABLE OF CONTENTS
+
+   01. Hero
+   02. Trust strip
+   03. Services
+   04. Film and warranty
+   05. Gallery
+   06. Video
+   07. Reviews
+   08. Service area
+   09. FAQ
+   10. Booking
+   11. Contact
+================================================== */
+
+/* ==================================================
+   01. HERO
+================================================== */
+
+.hero {
+    position: relative;
+
+    padding:
+        clamp(
+            4.5rem,
+            10vw,
+            7.5rem
+        )
+        0
+        5.25rem;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 12% 8%,
+            rgba(214, 163, 84, 0.18),
+            transparent 28%
+        ),
+        radial-gradient(
+            circle at 88% 20%,
+            rgba(83, 99, 114, 0.18),
+            transparent 32%
+        ),
+        linear-gradient(
+            180deg,
+            #171b20 0%,
+            var(--bg) 100%
+        );
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -1px;
+
+    height: 74px;
+
+    background:
+        linear-gradient(
+            to bottom right,
+            transparent 49%,
+            var(--bg-2) 50%
+        );
+
+    pointer-events: none;
+}
+
+.hero-content {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.7fr)
+        minmax(290px, 0.8fr);
+
+    gap:
+        clamp(
+            2rem,
+            6vw,
+            5rem
+        );
+
+    align-items: center;
+}
+
+.hero-copy {
+    position: relative;
+
+    z-index: 1;
+
+    max-width: 760px;
+}
+
+.hero-copy h1 {
+    max-width: 12ch;
+}
+
+.rating-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    gap: 0.6rem;
+
+    margin: 1.2rem 0 0.85rem;
+
+    color: var(--muted);
+}
+
+.stars {
+    color: var(--accent);
+
+    letter-spacing: 0.08em;
+}
+
+.hero-lead {
+    max-width: 42rem;
+
+    color: var(--text-soft);
+
+    font-size:
+        clamp(
+            1.02rem,
+            2vw,
+            1.18rem
+        );
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 0.75rem;
+
+    margin-top: 1.6rem;
+}
+
+.hero-location {
+    margin-top: 1rem;
+
+    color: var(--muted);
+
+    font-size: 0.88rem;
+}
+
+.hero-proof {
+    position: relative;
+
+    z-index: 1;
+
+    padding: 1.55rem;
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.09
+        );
+
+    border-radius: var(--radius-lg);
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(36, 43, 50, 0.95),
+            rgba(25, 30, 35, 0.95)
+        );
+
+    box-shadow: var(--shadow);
+}
+
+.proof-kicker {
+    margin-bottom: 1rem;
+
+    color: var(--accent-light);
+
+    font-size: 0.82rem;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+.hero-proof ul {
+    list-style: none;
+
+    display: grid;
+
+    gap: 0.85rem;
+}
+
+.hero-proof li {
+    position: relative;
+
+    padding-left: 1.5rem;
+
+    color: var(--text-soft);
+}
+
+.hero-proof li::before {
+    content: "✓";
+
+    position: absolute;
+    left: 0;
+
+    color: var(--accent);
+
+    font-weight: 800;
+}
+
+/* ==================================================
+   02. TRUST STRIP
+================================================== */
+
+.trust-strip {
+    position: relative;
+
+    z-index: 2;
+
+    margin-top: -1px;
+    padding: 1.35rem 0 2rem;
+
+    background: var(--bg-2);
+}
+
+.trust-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            4,
+            1fr
+        );
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    background: var(--panel);
+}
+
+.trust-grid div {
+    padding: 1.15rem;
+
+    text-align: center;
+}
+
+.trust-grid div + div {
+    border-left:
+        1px solid
+        var(--line);
+}
+
+.trust-grid strong,
+.trust-grid span {
+    display: block;
+}
+
+.trust-grid span {
+    margin-top: 0.15rem;
+
+    color: var(--muted);
+
+    font-size: 0.78rem;
+}
+
+/* ==================================================
+   03. SERVICES
+================================================== */
+
+.section-services {
+    background: var(--bg-2);
+}
+
+.section-heading p,
+.feature-copy p,
+.area-intro p,
+.faq-intro p,
+.booking-heading p,
+.contact-layout p,
+.video-copy p {
+    color: var(--muted);
+}
+
+.service-accordion {
+    display: grid;
+
+    gap: 0.85rem;
+}
+
+.service-item {
+    border:
+        1px solid
+        var(--line);
+
+    border-radius: var(--radius);
+
+    background: var(--panel);
+
+    overflow: hidden;
+}
+
+.service-item[open] {
+    border-color:
+        rgba(
+            214,
+            163,
+            84,
+            0.55
+        );
+}
+
+.service-item summary {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 1rem;
+
+    padding: 1.25rem 1.35rem;
+
+    cursor: pointer;
+
+    list-style: none;
+}
+
+.service-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.service-item summary span:first-child {
+    display: grid;
+
+    gap: 0.18rem;
+}
+
+.service-item summary small {
+    color: var(--muted);
+
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.summary-icon {
+    flex: 0 0 auto;
+
+    color: var(--accent);
+
+    font-size: 1.45rem;
+}
+
+.service-body {
+    padding:
+        0
+        1.35rem
+        1.3rem;
+
+    color: var(--text-soft);
+}
+
+.service-body ul {
+    margin-top: 0.75rem;
+    padding-left: 1.2rem;
+
+    display: grid;
+
+    gap: 0.35rem;
+}
+
+/* ==================================================
+   04. FILM AND WARRANTY
+================================================== */
+
+.feature-band {
+    border-block:
+        1px solid
+        var(--line);
+
+    background:
+        linear-gradient(
+            135deg,
+            #111416 0%,
+            #1b2025 55%,
+            #15191d 100%
+        );
+}
+
+.feature-layout {
+    display: grid;
+
+    grid-template-columns:
+        1.15fr
+        0.85fr;
+
+    gap: 2rem;
+
+    align-items: center;
+}
+
+.feature-copy p:last-child {
+    max-width: 42rem;
+
+    margin-top: 1rem;
+}
+
+.warranty-card {
+    padding: 1.5rem;
+
+    border:
+        1px solid
+        rgba(
+            214,
+            163,
+            84,
+            0.35
+        );
+
+    border-radius: var(--radius);
+
+    background:
+        rgba(
+            214,
+            163,
+            84,
+            0.06
+        );
+}
+
+.warranty-card p {
+    margin-top: 0.75rem;
+
+    color: var(--text-soft);
+}
+
+/* ==================================================
+   05. GALLERY
+================================================== */
+
+.section-gallery {
+    background: var(--bg);
+}
+
+.gallery-slider {
+    position: relative;
+
+    max-width: 960px;
+
+    margin-inline: auto;
+}
+
+.gallery-track {
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius: var(--radius-lg);
+
+    background: #08090a;
+
+    box-shadow: var(--shadow);
+}
+
+.gallery-slide {
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.gallery-slide.active {
+    display: block;
+}
+
+.gallery-nav {
+    position: absolute;
+    top: 50%;
+
+    z-index: 2;
+
+    width: 46px;
+    height: 46px;
+
+    transform: translateY(-50%);
+
+    border:
+        1px solid
+        rgba(
+            255,
+            255,
+            255,
+            0.13
+        );
+
+    border-radius: 50%;
+
+    background:
+        rgba(
+            16,
+            18,
+            20,
+            0.78
+        );
+
+    color: var(--text);
+
+    font-size: 1.65rem;
+
+    cursor: pointer;
+
+    backdrop-filter: blur(8px);
+}
+
+.gallery-prev {
+    left: 1rem;
+}
+
+.gallery-next {
+    right: 1rem;
+}
+
+.gallery-caption {
+    min-height: 1.5rem;
+
+    margin: 0.9rem auto 0;
+
+    color: var(--muted);
+
+    text-align: center;
+    font-size: 0.88rem;
+}
+
+.gallery-dots {
+    display: flex;
+    justify-content: center;
+
+    max-width: 100%;
+
+    gap: 0.38rem;
+
+    margin-top: 0.75rem;
+    padding: 0.25rem;
+
+    overflow-x: auto;
+
+    scrollbar-width: none;
+}
+
+.gallery-dots::-webkit-scrollbar {
+    display: none;
+}
+
+.gallery-dot {
+    flex: 0 0 auto;
+
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border:
+        1px solid
+        #77818b;
+
+    border-radius: 50%;
+
+    background: transparent;
+
+    cursor: pointer;
+}
+
+.gallery-dot.active {
+    border-color: var(--accent);
+    background: var(--accent);
+}
+
+/* ==================================================
+   06. VIDEO
+================================================== */
+
+.section-video {
+    background: var(--bg-2);
+}
+
+.video-layout {
+    display: grid;
+
+    grid-template-columns:
+        0.72fr
+        1.28fr;
+
+    gap: 2.5rem;
+
+    align-items: center;
+}
+
+.video-copy p:last-child {
+    margin-top: 1rem;
+}
+
+.video-wrapper {
+    overflow: hidden;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius: var(--radius-lg);
+
+    background: #000;
+
+    box-shadow: var(--shadow);
+}
+
+.promo-video {
+    display: block;
+
+    width: 100%;
+    max-height: 500px;
+
+    object-fit: cover;
+}
+
+/* ==================================================
+   07. REVIEWS
+================================================== */
+
+.section-reviews {
+    background:
+        linear-gradient(
+            180deg,
+            var(--bg-2),
+            var(--bg)
+        );
+}
+
+.review-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.15fr
+        0.85fr
+        0.85fr;
+
+    gap: 1rem;
+}
+
+.review-card {
+    display: flex;
+    flex-direction: column;
+
+    min-height: 240px;
+
+    padding: 1.35rem;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius: var(--radius);
+
+    background: var(--panel);
+}
+
+.review-card p {
+    margin: 0.7rem 0 1.2rem;
+
+    color: var(--text-soft);
+}
+
+.review-card span:last-child {
+    margin-top: auto;
+
+    color: var(--muted);
+
+    font-size: 0.82rem;
+}
+
+.featured-review {
+    background:
+        linear-gradient(
+            145deg,
+            var(--panel-soft),
+            var(--panel)
+        );
+}
+
+/* ==================================================
+   08. SERVICE AREA
+================================================== */
+
+.section-area {
+    background: var(--bg);
+}
+
+.area-layout {
+    display: grid;
+
+    grid-template-columns:
+        0.8fr
+        1.2fr;
+
+    gap:
+        clamp(
+            2rem,
+            7vw,
+            5rem
+        );
+
+    align-items: start;
+}
+
+.area-intro p:nth-of-type(2) {
+    margin: 1rem 0;
+}
+
+.area-list {
+    border-top:
+        1px solid
+        var(--line);
+}
+
+.area-list div {
+    display: grid;
+
+    grid-template-columns:
+        160px
+        1fr;
+
+    gap: 1.25rem;
+
+    padding: 1.3rem 0;
+
+    border-bottom:
+        1px solid
+        var(--line);
+}
+
+.area-list strong {
+    color: var(--accent-light);
+}
+
+.area-list span {
+    color: var(--text-soft);
+}
+
+/* ==================================================
+   09. FAQ
+================================================== */
+
+.section-faq {
+    background: var(--bg-2);
+}
+
+.faq-layout {
+    display: grid;
+
+    grid-template-columns:
+        0.7fr
+        1.3fr;
+
+    gap:
+        clamp(
+            2rem,
+            7vw,
+            5rem
+        );
+}
+
+.faq-intro p:last-child {
+    margin-top: 1rem;
+}
+
+.faq-list {
+    display: grid;
+
+    gap: 0.75rem;
+}
+
+.faq-item {
+    border-bottom:
+        1px solid
+        var(--line);
+}
+
+.faq-item summary {
+    padding: 1rem 0;
+
+    color: var(--text);
+
+    font-weight: 750;
+
+    cursor: pointer;
+}
+
+.faq-item p {
+    padding: 0 0 1.1rem;
+
+    color: var(--text-soft);
+}
+
+/* ==================================================
+   10. BOOKING
+================================================== */
+
+.section-booking {
+    background:
+        radial-gradient(
+            circle at 50% 10%,
+            rgba(214, 163, 84, 0.13),
+            transparent 34%
+        ),
+        linear-gradient(
+            180deg,
+            #14181c,
+            #0f1113
+        );
+}
+
+.booking-container {
+    max-width: 1120px;
+}
+
+.booking-heading {
+    max-width: 760px;
+
+    margin:
+        0
+        auto
+        2.25rem;
+
+    text-align: center;
+}
+
+.booking-heading > p:not(.eyebrow) {
+    max-width: 650px;
+
+    margin:
+        0.9rem
+        auto
+        0;
+
+    color: var(--text-soft);
+
+    font-size: 1.03rem;
+}
+
+.booking-heading .booking-guidance {
+    color: var(--muted);
+
+    font-size: 0.9rem;
+}
+
+.square-booking-shell {
+    overflow: hidden;
+
+    border:
+        1px solid
+        rgba(
+            214,
+            163,
+            84,
+            0.45
+        );
+
+    border-radius: var(--radius-lg);
+
+    background: var(--panel);
+
+    box-shadow: var(--shadow);
+}
+
+.square-booking-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+
+    padding:
+        1rem
+        1.2rem;
+
+    border-bottom:
+        1px solid
+        var(--line);
+
+    background: var(--panel-soft);
+
+    color: var(--muted);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.square-booking-header > div {
+    display: flex;
+    align-items: center;
+
+    gap: 0.6rem;
+}
+
+.square-booking-header a {
+    color: var(--accent-light);
+
+    text-decoration: none;
+}
+
+.square-booking-header a:hover {
+    text-decoration: underline;
+}
+
+.square-status-dot {
+    width: 8px;
+    height: 8px;
+
+    border-radius: 50%;
+
+    background: var(--accent);
+
+    box-shadow:
+        0 0 10px
+        rgba(
+            214,
+            163,
+            84,
+            0.65
+        );
+}
+
+.square-booking-widget {
+    min-height: 580px;
+
+    padding: 1.4rem;
+
+    background: #ffffff;
+}
+
+.square-booking-widget iframe {
+    display: block;
+
+    width: 100% !important;
+
+    max-width: 100% !important;
+
+    min-height: 550px;
+
+    border: 0;
+}
+
+.square-booking-widget > div,
+.square-booking-widget > iframe {
+    margin-inline: auto;
+}
+
+.booking-support {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1.5rem;
+
+    margin-top: 1.25rem;
+    padding: 1.2rem 1.3rem;
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius: var(--radius);
+
+    background:
+        rgba(
+            255,
+            255,
+            255,
+            0.025
+        );
+}
+
+.booking-support > div:first-child {
+    display: grid;
+
+    gap: 0.2rem;
+}
+
+.booking-support span {
+    color: var(--muted);
+
+    font-size: 0.88rem;
+}
+
+.booking-support-actions {
+    display: flex;
+
+    gap: 0.7rem;
+}
+
+.booking-note {
+    max-width: 760px;
+
+    margin:
+        1rem
+        auto
+        0;
+
+    color: var(--muted);
+
+    text-align: center;
+    font-size: 0.82rem;
+}
+
+/* ==================================================
+   11. CONTACT
+================================================== */
+
+.section-contact {
+    background: var(--bg-2);
+}
+
+.contact-layout {
+    display: grid;
+
+    grid-template-columns:
+        0.7fr
+        1.3fr;
+
+    gap: 2rem;
+
+    align-items: start;
+}
+
+.contact-layout > div:first-child p:last-child {
+    margin-top: 1rem;
+}
+
+.contact-card {
+    display: grid;
+
+    grid-template-columns:
+        repeat(
+            2,
+            1fr
+        );
+
+    border:
+        1px solid
+        var(--line);
+
+    border-radius: var(--radius);
+
+    overflow: hidden;
+
+    background: var(--panel);
+}
+
+.contact-card > * {
+    display: grid;
+
+    gap: 0.2rem;
+
+    padding: 1.2rem;
+
+    color: var(--text);
+
+    text-decoration: none;
+}
+
+.contact-card > *:nth-child(odd) {
+    border-right:
+        1px solid
+        var(--line);
+}
+
+.contact-card > *:nth-child(-n + 2) {
+    border-bottom:
+        1px solid
+        var(--line);
+}
+
+.contact-card span {
+    color: var(--muted);
+
+    font-size: 0.78rem;
+}
+
+.contact-card strong {
+    font-size: 0.94rem;
+}

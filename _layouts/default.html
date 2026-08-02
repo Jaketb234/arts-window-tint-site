@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>{{ page.title }}</title>
+
+    <meta
+        name="description"
+        content="{{ page.description }}"
+    />
+
+    <meta name="robots" content="index, follow" />
+
+    <meta
+        property="og:title"
+        content="Art's Window Tint & PPF"
+    />
+
+    <meta
+        property="og:description"
+        content="Professional automotive window tint and paint protection in Acworth, Georgia."
+    />
+
+    <meta property="og:type" content="website" />
+
+    <meta
+        property="og:image"
+        content="https://jaketb234.github.io/arts-window-tint-site/images/FilmShades.jpg"
+    />
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "AutoBodyShop",
+        "name": "Art's Window Tint & PPF",
+        "image": "https://jaketb234.github.io/arts-window-tint-site/images/FilmShades.jpg",
+        "url": "https://jaketb234.github.io/arts-window-tint-site/",
+        "telephone": "+1-470-420-1438",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "3353 Acworth Summit Boulevard, Unit 340",
+            "addressLocality": "Acworth",
+            "addressRegion": "GA",
+            "postalCode": "30101",
+            "addressCountry": "US"
+        },
+        "areaServed": [
+            "Acworth GA",
+            "Kennesaw GA",
+            "Marietta GA",
+            "Woodstock GA",
+            "Canton GA",
+            "Holly Springs GA",
+            "Dallas GA",
+            "Powder Springs GA"
+        ],
+        "priceRange": "$$",
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "30"
+        }
+    }
+    </script>
+
+    <link
+        rel="stylesheet"
+        href="assets/css/base.css"
+    />
+
+    <link
+        rel="stylesheet"
+        href="assets/css/sections.css"
+    />
+
+    <link
+        rel="stylesheet"
+        href="assets/css/responsive.css"
+    />
+</head>
+
+<body>
+
+<!-- ==================================================
+     SITE HEADER
+================================================== -->
+
+<header class="site-header">
+    <div class="container nav-container">
+        <a
+            class="logo"
+            href="#home"
+            aria-label="Art's Window Tint & PPF home"
+        >
+            <img
+                src="images/AWTLogo.jpg"
+                alt="Art's Window Tint & PPF logo"
+                class="logo-img"
+            />
+
+            <span class="logo-text">
+                <span class="logo-main">
+                    Art's Window Tint & PPF
+                </span>
+
+                <span class="logo-sub">
+                    Acworth, Georgia
+                </span>
+            </span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-expanded="false"
+            aria-controls="main-navigation"
+            aria-label="Open navigation menu"
+        >
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+
+        <nav
+            id="main-navigation"
+            class="main-nav"
+            aria-label="Main navigation"
+        >
+            <a href="#services">Services</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#reviews">Reviews</a>
+            <a href="#service-area">Service Area</a>
+            <a href="#faqs">FAQs</a>
+
+            <a
+                href="#booking"
+                class="nav-book"
+            >
+                Book Now
+            </a>
+        </nav>
+    </div>
+</header>
+
+<main>
+    {{ content }}
+</main>
+
+<!-- ==================================================
+     SITE FOOTER
+================================================== -->
+
+<footer class="site-footer">
+    <div class="container footer-content">
+        <p>
+            © <span id="year"></span>
+            Art's Window Tint & PPF
+        </p>
+
+        <p>
+            Acworth · Kennesaw · Marietta · Woodstock
+        </p>
+    </div>
+</footer>
+
+<!-- ==================================================
+     MOBILE ACTION BAR
+================================================== -->
+
+<div
+    class="mobile-action-bar"
+    aria-label="Quick actions"
+>
+    <a href="tel:14704201438">
+        Call
+    </a>
+
+    <a href="sms:14704201438">
+        Text
+    </a>
+
+    <a href="#booking">
+        Book
+    </a>
+</div>
+
+<script src="assets/js/site.js"></script>
+
+</body>
+</html>
