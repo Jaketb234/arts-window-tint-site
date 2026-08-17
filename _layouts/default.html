@@ -17,30 +17,42 @@
 
     <meta name="robots" content="index, follow" />
 
+    <link
+        rel="canonical"
+        href="https://artswindowtintppf.com{{ page.url }}"
+    />
+
     <meta
         property="og:title"
-        content="Art's Window Tint & PPF"
+        content="{{ page.title }}"
     />
 
     <meta
         property="og:description"
-        content="Professional automotive window tint and paint protection in Acworth, Georgia."
+        content="{{ page.description }}"
     />
 
     <meta property="og:type" content="website" />
 
     <meta
-        property="og:image"
-        content="https://jaketb234.github.io/arts-window-tint-site/images/FilmShades.jpg"
+        property="og:url"
+        content="https://artswindowtintppf.com{{ page.url }}"
     />
+
+    <meta
+        property="og:image"
+        content="https://artswindowtintppf.com/images/AWTLogo.jpg"
+    />
+
+    <meta name="twitter:card" content="summary_large_image" />
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
-        "@type": "AutoBodyShop",
+        "@type": "AutomotiveBusiness",
         "name": "Art's Window Tint & PPF",
-        "image": "https://jaketb234.github.io/arts-window-tint-site/images/FilmShades.jpg",
-        "url": "https://jaketb234.github.io/arts-window-tint-site/",
+        "image": "https://artswindowtintppf.com/images/AWTLogo.jpg",
+        "url": "https://artswindowtintppf.com/",
         "telephone": "+1-470-420-1438",
         "address": {
             "@type": "PostalAddress",
@@ -56,32 +68,37 @@
             "Marietta GA",
             "Woodstock GA",
             "Canton GA",
-            "Holly Springs GA",
+            "Cartersville GA",
             "Dallas GA",
-            "Powder Springs GA"
+            "Powder Springs GA",
+            "Smyrna GA",
+            "Atlanta GA"
         ],
         "priceRange": "$$",
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "30"
-        }
+        "sameAs": [
+            "https://www.instagram.com/artswindowtint/"
+        ]
     }
     </script>
 
     <link
         rel="stylesheet"
-        href="assets/css/base.css"
+        href="/assets/css/base.css"
     />
 
     <link
         rel="stylesheet"
-        href="assets/css/sections.css"
+        href="/assets/css/sections.css"
     />
 
     <link
         rel="stylesheet"
-        href="assets/css/responsive.css"
+        href="/assets/css/responsive.css"
+    />
+
+    <link
+        rel="stylesheet"
+        href="/assets/css/service-pages.css"
     />
 </head>
 
@@ -95,11 +112,11 @@
     <div class="container nav-container">
         <a
             class="logo"
-            href="#home"
+            href="/"
             aria-label="Art's Window Tint & PPF home"
         >
             <img
-                src="images/AWTLogo.jpg"
+                src="/images/AWTLogo.jpg"
                 alt="Art's Window Tint & PPF logo"
                 class="logo-img"
             />
@@ -132,14 +149,14 @@
             class="main-nav"
             aria-label="Main navigation"
         >
-            <a href="#services">Services</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#reviews">Reviews</a>
-            <a href="#service-area">Service Area</a>
-            <a href="#faqs">FAQs</a>
+            <a href="/#services">Services</a>
+            <a href="/#gallery">Gallery</a>
+            <a href="/#reviews">Reviews</a>
+            <a href="/#service-area">Service Area</a>
+            <a href="/#faqs">FAQs</a>
 
             <a
-                href="#booking"
+                href="/#booking"
                 class="nav-book"
             >
                 Book Now
@@ -185,12 +202,12 @@
         Text
     </a>
 
-    <a href="#booking">
+    <a href="/#booking">
         Book
     </a>
 </div>
 
-<script src="assets/js/site.js"></script>
+<script src="/assets/js/site.js"></script>
 
 </body>
 </html>
