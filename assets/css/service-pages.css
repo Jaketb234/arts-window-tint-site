@@ -1,0 +1,116 @@
+/* Dedicated service pages reuse the site's existing design system. */
+
+.service-page-hero {
+    padding: clamp(5rem, 9vw, 8rem) 0 clamp(3.5rem, 7vw, 5.5rem);
+    background: linear-gradient(180deg, var(--bg-2), var(--bg));
+}
+
+.service-page-hero .container,
+.service-page-content .container {
+    max-width: 920px;
+}
+
+.service-page-hero h1 {
+    max-width: 850px;
+    margin-bottom: 1.25rem;
+}
+
+.service-page-hero .lead {
+    max-width: 760px;
+    color: var(--text-soft);
+    font-size: clamp(1.05rem, 2vw, 1.22rem);
+}
+
+.service-page-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-top: 1.7rem;
+}
+
+.service-page-content {
+    padding: clamp(3.5rem, 7vw, 6rem) 0;
+}
+
+.service-page-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    margin: 2rem 0 3rem;
+}
+
+.service-page-card,
+.service-page-callout {
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--panel);
+    padding: clamp(1.25rem, 3vw, 1.8rem);
+}
+
+.service-page-card h2,
+.service-page-card h3,
+.service-page-callout h2 {
+    margin-bottom: 0.7rem;
+}
+
+.service-page-card p,
+.service-page-card li,
+.service-page-callout p {
+    color: var(--text-soft);
+}
+
+.service-page-card ul {
+    padding-left: 1.2rem;
+    margin-top: 0.75rem;
+}
+
+.service-page-card li + li {
+    margin-top: 0.35rem;
+}
+
+.service-page-section {
+    margin-top: 3.25rem;
+}
+
+.service-page-section > h2 {
+    margin-bottom: 1rem;
+}
+
+.service-page-section > p {
+    color: var(--text-soft);
+    margin-bottom: 1rem;
+}
+
+.service-page-faq details {
+    border-top: 1px solid var(--line);
+    padding: 1rem 0;
+}
+
+.service-page-faq details:last-child {
+    border-bottom: 1px solid var(--line);
+}
+
+.service-page-faq summary {
+    cursor: pointer;
+    font-weight: 750;
+}
+
+.service-page-faq details p {
+    color: var(--text-soft);
+    padding-top: 0.7rem;
+}
+
+.service-page-callout {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.service-page-callout .service-page-actions {
+    justify-content: center;
+}
+
+@media (max-width: 720px) {
+    .service-page-grid {
+        grid-template-columns: 1fr;
+    }
+}
